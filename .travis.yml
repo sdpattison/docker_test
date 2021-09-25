@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sdpattison/docker_test -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true sdpattison/docker_test npm run test -- --coverage
+
+language: generic
