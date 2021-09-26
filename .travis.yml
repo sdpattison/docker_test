@@ -11,7 +11,7 @@ script:
 language: generic
 
 deploy:
-  provider: elaticbeanstalk
+  provider: elasticbeanstalk
   region: "us-east-1"
   app: "docker-init"
   env: "Dockerinit-env"
