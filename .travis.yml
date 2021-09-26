@@ -14,7 +14,7 @@ deploy:
   provider: elaticbeanstalk
   region: "us-east-1"
   app: "docker-init"
-  env: "Docker-env"
+  env: "Dockerinit-env"
   bucket_name: "elasticbeanstalk-us-east-1-642858186590"
   bucket_path: "docker-init"
   on:
