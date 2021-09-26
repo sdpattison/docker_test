@@ -13,10 +13,10 @@ language: generic
 deploy:
   provider: elaticbeanstalk
   region: "us-east-1"
-  app: "Dockerinit"
+  app: "docker-init"
   env: "Docker-env"
   bucket_name: "elasticbeanstalk-us-east-1-642858186590"
-  bucket_path: "Dockerinit"
+  bucket_path: "docker-init"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
