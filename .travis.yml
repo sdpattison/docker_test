@@ -9,3 +9,15 @@ script:
   - docker run -e CI=true sdpattison/docker_test npm run test -- --coverage
 
 language: generic
+
+deploy:
+  provider: elaticbeanstalk
+  region: "us-east-1"
+  app: "Dockerinit"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-642858186590"
+  bucket_path: "Dockerinit"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
